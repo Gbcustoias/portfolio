@@ -1,3 +1,45 @@
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+
+  --primary: #3b82f6;
+  --secondary: #8b5cf6;
+
+  --text: #ffffff;
+  --text-muted: #cbd5e1;
+
+  --container: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text);
+  font-family: "Segoe UI", sans-serif;
+}
+
+section {
+  padding: 100px 20px;
+}
+
+.container {
+  max-width: var(--container);
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
