@@ -1,0 +1,42 @@
+section {
+  padding: 80px 10%;
+}
+
+h1,
+h2,
+h3 {
+  color: white;
+}
+
+p {
+  color: #cbd5e1;
+}
+.hero {
+  min-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 20px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+.hero h2 {
+  color: #3b82f6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero button {
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}

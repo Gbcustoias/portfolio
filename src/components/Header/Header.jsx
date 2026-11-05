@@ -2,8 +2,15 @@ import "./Header.css";
 
 function Header() {
   return (
-    <header>
-      <h2>Giovani Boldrini</h2>
+    <header className="header">
+      <div className="logo">Giovani Boldrini</div>
+
+      <nav>
+        <a href="#about">Sobre</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projetos</a>
+        <a href="#contact">Contato</a>
+      </nav>
     </header>
   );
 }
