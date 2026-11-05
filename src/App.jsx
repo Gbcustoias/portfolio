@@ -1,6 +1,10 @@
+import Header from "./components/Header/Header";
+
 function App() {
   return (
-    <h1>Portfólio Giovani Boldrini</h1>
+    <>
+      <Header />
+    </>
   );
 }
 
