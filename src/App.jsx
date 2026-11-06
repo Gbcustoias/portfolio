@@ -5,12 +5,14 @@ import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import Journey from "./components/Journey/Journey";
 
 function App() {
   return (
     <>
       <Header />
       <Hero />
+      <Journey />
       <About />
       <Skills />
       <Projects />
