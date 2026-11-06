@@ -1,21 +1,43 @@
 import "./Hero.css";
+import profile from "../../assets/profile.png";
 
 function Hero() {
   return (
     <section className="hero">
-      <h1>Giovani Boldrini</h1>
+      <div className="hero-content">
+        <span className="hero-tag">
+          Analista de Sistemas Jr.
+        </span>
 
-      <h2>
-        Analista de Sistemas Jr. | Desenvolvedor Full Stack
-      </h2>
+        <h1>
+          Giovani
+          <br />
+          Boldrini
+        </h1>
 
-      <p>
-        Java • Spring Boot • React • PostgreSQL
-      </p>
+        <p>
+          Desenvolvedor Full Stack com foco em Java,
+          Spring Boot, React e PostgreSQL.
+        </p>
 
-      <div className="hero-buttons">
-        <button>Projetos</button>
-        <button>Contato</button>
+        <div className="hero-buttons">
+          <a href="#projects" className="btn-primary">
+            Ver Projetos
+          </a>
+
+          <a
+            href="https://github.com/Gbcustoias"
+            target="_blank"
+            rel="noreferrer"
+            className="btn-secondary"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div className="hero-image">
+        <img src={profile} alt="Giovani Boldrini" />
       </div>
     </section>
   );
