@@ -5,28 +5,30 @@ import {
   FaLinkedin,
   FaMapMarkerAlt,
   FaGraduationCap,
+  FaArrowRight,
 } from "react-icons/fa";
 
 function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="section-header">
-        <span className="section-tag">Conexões</span>
+        <span className="section-tag">
+          Presença Profissional
+        </span>
 
         <h2>
-          Profissionalmente conectado entre pesquisa,
-          dados e tecnologia.
+          Conectando pesquisa, tecnologia e análise de dados.
         </h2>
 
         <p>
-          Atualmente atuando na Vivo, com foco em Analytics,
-          Automação e Tecnologia, construindo soluções que
-          transformam dados em informação para tomada de decisão.
+          Minha atuação combina experiência corporativa,
+          formação científica e desenvolvimento de soluções
+          orientadas por dados para apoiar decisões baseadas
+          em evidências.
         </p>
       </div>
 
       <div className="contact-grid">
-
         <a
           href="https://www.linkedin.com/in/giovani-boldrini-custoias-63312516a"
           target="_blank"
@@ -35,10 +37,12 @@ function Contact() {
         >
           <FaLinkedin />
 
-          <div>
+          <div className="contact-content">
             <h3>LinkedIn</h3>
-            <p>Rede profissional</p>
+            <p>Experiência profissional e networking</p>
           </div>
+
+          <FaArrowRight className="contact-arrow" />
         </a>
 
         <a
@@ -49,10 +53,12 @@ function Contact() {
         >
           <FaGithub />
 
-          <div>
+          <div className="contact-content">
             <h3>GitHub</h3>
-            <p>Projetos e código</p>
+            <p>Projetos, código e desenvolvimento</p>
           </div>
+
+          <FaArrowRight className="contact-arrow" />
         </a>
 
         <a
@@ -63,21 +69,22 @@ function Contact() {
         >
           <FaGraduationCap />
 
-          <div>
+          <div className="contact-content">
             <h3>Lattes</h3>
-            <p>Produção acadêmica</p>
+            <p>Pesquisa científica e produção acadêmica</p>
           </div>
+
+          <FaArrowRight className="contact-arrow" />
         </a>
 
         <div className="contact-card location-card">
           <FaMapMarkerAlt />
 
-          <div>
+          <div className="contact-content">
             <h3>Localização</h3>
-            <p>São Paulo, Brasil</p>
+            <p>São Paulo • Brasil</p>
           </div>
         </div>
-
       </div>
     </section>
   );
