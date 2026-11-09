@@ -4,70 +4,81 @@ function Journey() {
   const journeySteps = [
     {
       title: "Nutrição",
+      subtitle: "Base em Evidências",
       description:
-        "Formação voltada para análise de indicadores de saúde, avaliação clínica e tomada de decisão baseada em evidências."
+        "Primeiros contatos com indicadores, interpretação de resultados e tomada de decisão baseada em evidências."
     },
     {
       title: "Pesquisa Científica",
+      subtitle: "Método e Estatística",
       description:
-        "Atuação em estudos experimentais envolvendo estatística, metodologia científica e análise de resultados."
+        "Desenvolvimento de pensamento analítico através de pesquisa experimental, estatística e validação de hipóteses."
     },
     {
-      title: "Mestrado USP",
+      title: "USP",
+      subtitle: "Mestrado em Ciências",
       description:
-        "Desenvolvimento de competências avançadas em pesquisa, bioestatística, interpretação de dados e produção científica."
+        "Aprofundamento em bioestatística, metodologia científica e análise de dados aplicada."
     },
     {
-      title: "Docência Universitária",
+      title: "Docência",
+      subtitle: "Comunicação e Liderança",
       description:
-        "Ensino de disciplinas relacionadas à bioestatística, metodologia científica e nutrição."
+        "Transformação de conhecimento complexo em informação acessível por meio do ensino universitário."
     },
     {
       title: "Tecnologia",
+      subtitle: "Escalabilidade",
       description:
-        "Aplicação de desenvolvimento de software e automação para escalar processos e gerar valor por meio de dados."
+        "Automação de processos e desenvolvimento de soluções para ampliar o impacto da análise de dados."
     },
     {
-      title: "Data Analytics",
+      title: "Analytics",
+      subtitle: "Tomada de Decisão",
       description:
-        "Construção de indicadores, dashboards, relatórios executivos e análises para suporte à tomada de decisão."
+        "Construção de indicadores, dashboards e análises voltadas para ambientes corporativos."
     },
     {
-      title: "Business Intelligence",
+      title: "Data Science",
+      subtitle: "Próxima Evolução",
       description:
-        "Transformação de dados em informações acionáveis através de processos de análise, modelagem e visualização."
-    },
-    {
-      title: "Ciência de Dados",
-      description:
-        "Aplicação de Machine Learning e técnicas analíticas avançadas para exploração, previsão e interpretação de dados."
+        "Aplicação de Machine Learning e modelos analíticos para geração de conhecimento e previsões."
     }
   ];
 
   return (
     <section id="journey" className="journey">
       <div className="section-header">
-        <span className="section-tag">Jornada Profissional</span>
+        <span className="section-tag">
+          Jornada Profissional
+        </span>
 
-        <h2>Uma trajetória construída sobre análise de evidências.</h2>
+        <h2>
+          Uma carreira construída sobre análise de evidências.
+        </h2>
 
         <p>
-          Minha carreira sempre esteve conectada à interpretação de dados,
-          pesquisa e tomada de decisão baseada em evidências. A tecnologia
-          surgiu como uma evolução natural para ampliar o impacto dessa
-          capacidade analítica.
+          Embora tenha passado por diferentes áreas,
+          toda a minha trajetória possui um elemento em comum:
+          transformar informação em conhecimento útil para apoiar
+          decisões melhores.
         </p>
       </div>
 
-      <div className="timeline">
+      <div className="journey-roadmap">
         {journeySteps.map((step, index) => (
-          <div className="timeline-item" key={index}>
-            <div className="timeline-dot"></div>
-
-            <div className="timeline-content">
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
+          <div className="journey-card" key={index}>
+            <div className="journey-number">
+              {String(index + 1).padStart(2, "0")}
             </div>
+
+            <h3>{step.title}</h3>
+
+            <span className="journey-subtitle">
+              {step.subtitle}
+            </span>
+
+            <p>{step.description}</p>
           </div>
         ))}
       </div>
