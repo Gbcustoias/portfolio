@@ -7,38 +7,39 @@ function Hero() {
       <div className="hero-content">
 
         <span className="hero-badge">
-          Analista de Sistemas Jr. • Vivo
+          Vivo • Analytics • Tecnologia
         </span>
 
         <h1>
-          Data Analytics,
+          Transformando Dados
           <br />
-          Automation &
+          em Informação
           <br />
-          Technology
+          para Decisão
         </h1>
 
         <p className="hero-description">
           Profissional com formação científica avançada,
-          experiência acadêmica e atuação corporativa
-          desenvolvendo soluções orientadas por dados
-          para apoiar a tomada de decisão.
+          atuação corporativa em tecnologia e experiência
+          em análise de dados, automação e Business
+          Intelligence.
         </p>
 
         <div className="hero-tags">
           <span>Data Analytics</span>
           <span>Business Intelligence</span>
-          <span>Automação</span>
-          <span>Pesquisa Científica</span>
+          <span>Data Visualization</span>
+          <span>Automation</span>
+          <span>Scientific Research</span>
         </div>
 
         <div className="hero-buttons">
           <a href="#projects" className="btn-primary">
-            Ver Projetos
+            Explorar Projetos
           </a>
 
           <a
-            href="SEU_LINKEDIN"
+            href="https://www.linkedin.com/in/giovani-boldrini-custoias-63312516a"
             target="_blank"
             rel="noreferrer"
             className="btn-secondary"
@@ -55,24 +56,61 @@ function Hero() {
           </div>
 
           <div className="metric-card">
-            <h3>Dados</h3>
-            <p>Analytics & BI</p>
+            <h3>8+</h3>
+            <p>Projetos de Dados</p>
           </div>
 
           <div className="metric-card">
-            <h3>Vivo</h3>
-            <p>Atuação Corporativa</p>
+            <h3>15+</h3>
+            <p>Tecnologias Aplicadas</p>
+          </div>
+
+          <div className="metric-card">
+            <h3>Analytics</h3>
+            <p>Foco Profissional</p>
           </div>
 
         </div>
-
       </div>
 
-      <div className="hero-image">
-        <img
-          src={profile}
-          alt="Giovani Boldrini Custoias"
-        />
+      <div className="hero-image-wrapper">
+
+        <div className="analytics-card">
+          <span>Analytics Snapshot</span>
+
+          <div className="analytics-bars">
+
+            <div className="analytics-item">
+              <label>Data Analytics</label>
+              <div className="bar">
+                <div className="fill analytics"></div>
+              </div>
+            </div>
+
+            <div className="analytics-item">
+              <label>Business Intelligence</label>
+              <div className="bar">
+                <div className="fill bi"></div>
+              </div>
+            </div>
+
+            <div className="analytics-item">
+              <label>Pesquisa Científica</label>
+              <div className="bar">
+                <div className="fill science"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div className="hero-image">
+          <img
+            src={profile}
+            alt="Giovani Boldrini Custoias"
+          />
+        </div>
+
       </div>
     </section>
   );
