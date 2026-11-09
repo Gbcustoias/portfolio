@@ -1,6 +1,17 @@
 import "./Publications.css";
 
 function Publications() {
+  const competencies = [
+    "Análise Estatística",
+    "Interpretação de Resultados",
+    "Construção de Hipóteses",
+    "Validação de Evidências",
+    "Pesquisa Experimental",
+    "Produção Científica",
+    "Comunicação Técnica",
+    "Metodologia Científica"
+  ];
+
   return (
     <section id="publications" className="publications">
       <div className="section-header">
@@ -9,64 +20,89 @@ function Publications() {
         </span>
 
         <h2>
-          Pesquisa científica como fundamento da capacidade analítica.
+          Ciência como fundamento da capacidade analítica.
         </h2>
 
         <p>
-          A experiência em pesquisa científica contribuiu para o
-          desenvolvimento de competências em estatística,
-          metodologia experimental, interpretação de dados
-          e comunicação de resultados baseada em evidências.
+          Antes da atuação em tecnologia e analytics,
+          o desenvolvimento profissional esteve fortemente
+          ligado à pesquisa científica, estatística e
+          interpretação de evidências.
         </p>
       </div>
 
-      <div className="publication-card">
-        <span className="publication-type">
-          Dissertação de Mestrado
-        </span>
+      <div className="publication-highlight">
 
-        <h3>
-          Efeitos da suplementação de β-hidroxi-β-metilbutirato (HMB)
-          sobre o dano muscular induzido pelo exercício resistido
-        </h3>
+        <div className="publication-main">
 
-        <h4>
-          Universidade de São Paulo (USP)
-        </h4>
+          <span className="publication-type">
+            Dissertação de Mestrado
+          </span>
 
-        <p>
-          Pesquisa desenvolvida com foco na avaliação dos efeitos
-          da suplementação de HMB sobre marcadores associados ao
-          dano muscular provocado pelo exercício resistido.
-        </p>
+          <h3>
+            Efeitos da suplementação de
+            β-hidroxi-β-metilbutirato (HMB)
+            sobre o dano muscular induzido
+            pelo exercício resistido
+          </h3>
 
-        <p>
-          O trabalho envolveu planejamento experimental,
-          coleta de dados, análise estatística,
-          interpretação crítica de resultados e produção científica.
-        </p>
+          <h4>
+            Universidade de São Paulo (USP)
+          </h4>
 
-        <div className="publication-tags">
-          <span>Pesquisa Experimental</span>
-          <span>Bioestatística</span>
-          <span>Análise de Dados</span>
-          <span>Metodologia Científica</span>
-          <span>Produção Científica</span>
+          <p>
+            Pesquisa experimental desenvolvida para
+            avaliar os efeitos da suplementação de HMB
+            sobre marcadores de dano muscular induzido
+            pelo exercício resistido.
+          </p>
+
+          <p>
+            O estudo envolveu planejamento experimental,
+            coleta e tratamento de dados, análises
+            estatísticas, interpretação crítica dos
+            resultados e produção científica.
+          </p>
+
+          <div className="publication-tags">
+            <span>Bioestatística</span>
+            <span>Análise de Dados</span>
+            <span>Pesquisa Experimental</span>
+            <span>Metodologia Científica</span>
+            <span>Produção Científica</span>
+          </div>
+        </div>
+
+        <div className="publication-side">
+
+          <div className="publication-metric">
+            <h3>USP</h3>
+            <p>Mestrado em Ciências</p>
+          </div>
+
+          <div className="publication-metric">
+            <h3>Dados</h3>
+            <p>Análise Estatística</p>
+          </div>
+
+          <div className="publication-metric">
+            <h3>Pesquisa</h3>
+            <p>Experimental</p>
+          </div>
+
         </div>
       </div>
 
       <div className="competencies-card">
         <h3>Competências Desenvolvidas</h3>
 
-        <ul>
-          <li>Análise Estatística</li>
-          <li>Interpretação de Resultados</li>
-          <li>Construção de Hipóteses</li>
-          <li>Validação de Evidências</li>
-          <li>Pesquisa Experimental</li>
-          <li>Produção Científica</li>
-          <li>Comunicação Técnica</li>
-        </ul>
+        <div className="competencies-grid">
+          {competencies.map((item) => (
+            <div key={item} className="competency-item">
+              {item}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
