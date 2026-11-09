@@ -5,8 +5,9 @@ function Projects() {
     {
       title: "Observatório CNES",
       category: "Data Analytics",
+      impact: "Dados Públicos • Saúde • Dashboards",
       description:
-        "Sistema orientado a dados para análise de estabelecimentos de saúde utilizando APIs, dashboards, mapas e indicadores estatísticos.",
+        "Plataforma orientada a dados para análise de estabelecimentos de saúde brasileiros utilizando APIs, visualização geográfica, indicadores e dashboards interativos.",
       technologies: [
         "Java",
         "Spring Boot",
@@ -19,8 +20,9 @@ function Projects() {
     {
       title: "Jira Analytics Reporter",
       category: "Business Intelligence",
+      impact: "Governança • Automação • Relatórios",
       description:
-        "Solução corporativa para geração automatizada de relatórios executivos, indicadores e análises voltadas à governança de dados.",
+        "Solução corporativa desenvolvida para automatizar a geração de relatórios executivos e indicadores estratégicos em ambiente empresarial.",
       technologies: [
         "Python",
         "Pandas",
@@ -32,8 +34,9 @@ function Projects() {
     {
       title: "Predição de Mutação ALDH2",
       category: "Machine Learning",
+      impact: "Pesquisa • IA • Saúde",
       description:
-        "Projeto de pesquisa biomédica utilizando algoritmos de Machine Learning e interpretabilidade para análise preditiva.",
+        "Aplicação de Machine Learning para investigação biomédica utilizando modelos supervisionados e técnicas avançadas de interpretabilidade.",
       technologies: [
         "Python",
         "Scikit-Learn",
@@ -58,21 +61,31 @@ function Projects() {
       <div className="section-header">
         <span className="section-tag">Projetos</span>
 
-        <h2>Projetos que demonstram aplicação prática de dados e tecnologia.</h2>
+        <h2>
+          Aplicando dados, tecnologia e pesquisa em problemas reais.
+        </h2>
 
         <p>
-          Soluções desenvolvidas em contextos acadêmicos, corporativos
-          e tecnológicos, com foco em análise de dados, automação,
-          inteligência de negócios e desenvolvimento de software.
+          Projetos desenvolvidos em ambientes acadêmicos,
+          corporativos e tecnológicos, demonstrando aplicação
+          prática de Analytics, Business Intelligence,
+          Machine Learning e Desenvolvimento de Software.
         </p>
       </div>
 
       <div className="featured-projects">
         {featuredProjects.map((project) => (
           <div key={project.title} className="project-card">
-            <span className="project-category">
-              {project.category}
-            </span>
+
+            <div className="project-header">
+              <span className="project-category">
+                {project.category}
+              </span>
+
+              <span className="project-impact">
+                {project.impact}
+              </span>
+            </div>
 
             <h3>{project.title}</h3>
 
@@ -88,15 +101,20 @@ function Projects() {
       </div>
 
       <div className="secondary-projects">
+
         <h3>Projetos Complementares</h3>
 
         <div className="secondary-grid">
           {secondaryProjects.map((project) => (
-            <div key={project} className="secondary-card">
+            <div
+              key={project}
+              className="secondary-card"
+            >
               {project}
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

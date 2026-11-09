@@ -4,48 +4,109 @@
 
 .featured-projects {
   max-width: 1200px;
-  margin: 0 auto;
+
+  margin: 60px auto 0;
 
   display: grid;
 
-  grid-template-columns: 1fr;
   gap: 25px;
 }
 
 .project-card {
   background: #1e293b;
 
-  border-radius: 18px;
-
   padding: 35px;
 
-  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 20px;
 
-  transition: .3s;
+  border: 1px solid rgba(249, 115, 22, 0.15);
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: all 0.35s ease;
+}
+
+.project-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(249, 115, 22, 0.08),
+    rgba(147, 51, 234, 0.08)
+  );
+
+  opacity: 0;
+
+  transition: 0.35s;
+}
+
+.project-card:hover::before {
+  opacity: 1;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
 
-  border-color: rgba(59, 130, 246, 0.50);
+  border-color: #f97316;
+
+  box-shadow:
+    0 15px 35px rgba(249, 115, 22, 0.15);
+}
+
+.project-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+
+  position: relative;
+
+  z-index: 1;
 }
 
 .project-category {
-  color: #3b82f6;
+  color: #f97316;
 
-  font-size: .9rem;
+  font-weight: 700;
+}
+
+.project-impact {
+  color: #9333ea;
+
+  font-size: 0.9rem;
 
   font-weight: 600;
 }
 
 .project-card h3 {
-  margin: 15px 0;
+  margin-bottom: 15px;
+
+  position: relative;
+
+  z-index: 1;
 }
 
 .project-card p {
+  color: #cbd5e1;
+
   line-height: 1.8;
 
   margin-bottom: 25px;
+
+  position: relative;
+
+  z-index: 1;
 }
 
 .project-tags {
@@ -54,10 +115,16 @@
   flex-wrap: wrap;
 
   gap: 10px;
+
+  position: relative;
+
+  z-index: 1;
 }
 
 .project-tags span {
   background: #0f172a;
+
+  color: #cbd5e1;
 
   padding: 8px 12px;
 
@@ -77,7 +144,10 @@
 .secondary-grid {
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(260px, 1fr)
+  );
 
   gap: 20px;
 }
@@ -85,9 +155,19 @@
 .secondary-card {
   background: #1e293b;
 
+  border: 1px solid rgba(249, 115, 22, 0.15);
+
+  border-radius: 16px;
+
   padding: 20px;
 
-  border-radius: 14px;
-
   text-align: center;
+
+  transition: 0.3s;
+}
+
+.secondary-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #f97316;
 }
