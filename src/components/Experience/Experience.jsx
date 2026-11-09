@@ -3,46 +3,46 @@ import "./Experience.css";
 function Experience() {
   const experiences = [
     {
-      company: "Vivo",
-      role: "Estagiário - Governança de Portfólio.",
-      period: "Atual",
+      organization: "Vivo",
+      role: "Estagiário • Governança de Portfólio",
+      badge: "Corporativo",
       description:
-        "Atuação em iniciativas orientadas por dados, desenvolvimento de automações e geração de indicadores para suporte à tomada de decisão. Utilização de SQL, Python, Power BI, Excel e Power Automate para análise, governança e otimização de processos.",
-      skills: [
+        "Atuação em análises de indicadores, automação de processos e suporte à tomada de decisão através de SQL, Python, Power BI, Excel e Power Automate.",
+      highlights: [
+        "Analytics",
+        "Governança",
+        "Power BI",
         "SQL",
         "Python",
-        "Power BI",
-        "Excel",
-        "Power Automate",
-        "Governança de Dados"
+        "Automação"
       ]
     },
     {
-      company: "Pesquisa Científica",
-      role: "Mestrado em Ciências - USP",
-      period: "Pesquisa Acadêmica",
+      organization: "Pesquisa Científica",
+      role: "Mestrado em Ciências • USP",
+      badge: "Pesquisa",
       description:
-        "Desenvolvimento e condução de estudos experimentais com foco em bioestatística, metodologia científica, análise de dados e interpretação de resultados aplicados à saúde.",
-      skills: [
+        "Condução de pesquisa experimental envolvendo bioestatística, metodologia científica, análise de dados e interpretação de resultados para produção de evidências científicas.",
+      highlights: [
         "Estatística",
-        "Metodologia Científica",
         "Análise de Dados",
         "Pesquisa Experimental",
-        "Produção Científica"
+        "Metodologia Científica",
+        "Publicação Científica"
       ]
     },
     {
-      company: "Docência Universitária",
+      organization: "Docência Universitária",
       role: "Professor Universitário",
-      period: "Experiência Acadêmica",
+      badge: "Educação",
       description:
-        "Ministração de disciplinas relacionadas à bioestatística, pesquisa científica e nutrição, contribuindo para formação acadêmica baseada em evidências.",
-      skills: [
+        "Ministração de disciplinas relacionadas à bioestatística, pesquisa científica e nutrição, desenvolvendo comunicação técnica e pensamento analítico.",
+      highlights: [
         "Bioestatística",
         "Pesquisa Científica",
         "Comunicação",
         "Didática",
-        "Produção de Conteúdo"
+        "Análise Crítica"
       ]
     }
   ];
@@ -50,35 +50,37 @@ function Experience() {
   return (
     <section id="experience" className="experience">
       <div className="section-header">
-        <span className="section-tag">Experiência</span>
+        <span className="section-tag">
+          Experiência
+        </span>
 
         <h2>
-          Experiências que conectam ciência, dados e tecnologia.
+          Ciência, negócio e tecnologia aplicados à tomada de decisão.
         </h2>
 
         <p>
-          Minha trajetória profissional reúne experiência corporativa,
-          pesquisa científica e docência, formando uma base sólida para
-          construir soluções orientadas por dados.
+          Minha experiência foi construída em diferentes contextos,
+          mas sempre com o mesmo objetivo: transformar informação em
+          conhecimento útil para apoiar decisões melhores.
         </p>
       </div>
 
       <div className="experience-grid">
-        {experiences.map((exp, index) => (
-          <div key={index} className="experience-card">
-            <span className="experience-period">
-              {exp.period}
+        {experiences.map((exp) => (
+          <div className="experience-card" key={exp.organization}>
+            <span className="experience-badge">
+              {exp.badge}
             </span>
 
-            <h3>{exp.company}</h3>
+            <h3>{exp.organization}</h3>
 
             <h4>{exp.role}</h4>
 
             <p>{exp.description}</p>
 
             <div className="experience-tags">
-              {exp.skills.map((skill) => (
-                <span key={skill}>{skill}</span>
+              {exp.highlights.map((item) => (
+                <span key={item}>{item}</span>
               ))}
             </div>
           </div>
