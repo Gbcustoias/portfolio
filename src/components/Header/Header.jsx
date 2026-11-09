@@ -9,7 +9,7 @@ function Header() {
         </span>
 
         <span className="logo-role">
-          Data Analytics & Technology
+          Data Analytics • Technology
         </span>
       </div>
 
@@ -20,12 +20,12 @@ function Header() {
         <a href="#skills">Competências</a>
         <a href="#education">Formação</a>
         <a href="#publications">Pesquisa</a>
-        <a href="#contact">Contato</a>
+        <a href="#contact">Conexões</a>
       </nav>
 
       <div className="header-actions">
         <a
-          href="SEU_GITHUB"
+          href="https://github.com/Gbcustoias/"
           target="_blank"
           rel="noreferrer"
           className="header-button secondary"
@@ -34,7 +34,7 @@ function Header() {
         </a>
 
         <a
-          href="SEU_LINKEDIN"
+          href="https://www.linkedin.com/in/giovani-boldrini-custoias-63312516a"
           target="_blank"
           rel="noreferrer"
           className="header-button primary"
