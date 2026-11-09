@@ -5,26 +5,34 @@ function Education() {
     {
       institution: "Universidade de São Paulo (USP)",
       degree: "Mestrado em Ciências",
+      period: "Pesquisa Científica",
+      highlight: "Base Analítica",
       description:
-        "Desenvolvimento de pesquisa experimental com foco em bioestatística, metodologia científica, análise de dados e interpretação de resultados."
+        "Pesquisa experimental envolvendo bioestatística, metodologia científica, análise de dados, interpretação de resultados e produção científica."
     },
     {
-      institution: "Pós-graduação",
-      degree: "Nutrição Esportiva",
+      institution: "Pós-graduação em Nutrição Esportiva",
+      degree: "Especialização",
+      period: "Aprofundamento",
+      highlight: "Evidências Científicas",
       description:
-        "Aprofundamento em avaliação de evidências científicas, interpretação de resultados e aplicação prática de conhecimento baseado em dados."
+        "Avaliação crítica de evidências, interpretação de resultados e aplicação prática de conhecimento baseado em dados."
     },
     {
-      institution: "Graduação",
-      degree: "Nutrição",
+      institution: "Graduação em Nutrição",
+      degree: "Bacharelado",
+      period: "Formação Inicial",
+      highlight: "Tomada de Decisão",
       description:
-        "Formação voltada para análise de indicadores de saúde, avaliação clínica e tomada de decisão baseada em evidências."
+        "Construção de pensamento analítico voltado para indicadores, avaliação clínica e decisões baseadas em evidências."
     },
     {
       institution: "FATEC",
       degree: "Análise e Desenvolvimento de Sistemas",
+      period: "Tecnologia",
+      highlight: "Expansão Técnica",
       description:
-        "Formação complementar focada em desenvolvimento de software, bancos de dados, automação e tecnologias para soluções orientadas por dados."
+        "Desenvolvimento de software, bancos de dados, automação, APIs e tecnologias para soluções orientadas por dados."
     }
   ];
 
@@ -34,28 +42,32 @@ function Education() {
         <span className="section-tag">Formação</span>
 
         <h2>
-          Formação construída entre ciência, pesquisa e tecnologia.
+          Ciência, análise de dados e tecnologia como uma única trajetória.
         </h2>
 
         <p>
-          Minha base acadêmica combina metodologia científica,
-          estatística e tecnologia, permitindo atuar na interseção
-          entre análise de dados e desenvolvimento de soluções.
+          Minha formação foi construída em diferentes áreas do conhecimento,
+          sempre com um elemento em comum: análise de informações,
+          interpretação de resultados e tomada de decisão baseada em evidências.
         </p>
       </div>
 
-      <div className="education-timeline">
+      <div className="education-grid">
         {education.map((item, index) => (
-          <div key={index} className="education-item">
-            <div className="education-dot"></div>
+          <div className="education-card" key={index}>
+            <span className="education-badge">
+              {item.highlight}
+            </span>
 
-            <div className="education-card">
-              <h3>{item.degree}</h3>
+            <h3>{item.degree}</h3>
 
-              <h4>{item.institution}</h4>
+            <h4>{item.institution}</h4>
 
-              <p>{item.description}</p>
-            </div>
+            <span className="education-period">
+              {item.period}
+            </span>
+
+            <p>{item.description}</p>
           </div>
         ))}
       </div>
