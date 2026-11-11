@@ -7,102 +7,67 @@ function Hero() {
       <div className="hero-content">
 
         <span className="hero-badge">
-          Vivo • Analytics • Tecnologia
+          Analista de Sistemas Jr. • Mestre em Ciências
         </span>
 
         <h1>
-          Transformando Dados
+          Ciência
           <br />
-          em Informação
+          Tecnologia
           <br />
-          para Decisão
+          e Dados.
         </h1>
 
         <p className="hero-description">
-          Profissional com formação científica avançada,
-          atuação corporativa em tecnologia e experiência
-          em análise de dados, automação e Business
-          Intelligence.
+          Mestre em Ciências pela USP e profissional de tecnologia na Vivo.
+          Atuo no desenvolvimento de soluções voltadas para automação,
+          suporte à tomada de decisão com base em analítica de dados.
         </p>
 
         <div className="hero-tags">
           <span>Data Analytics</span>
+          <span>Data Science</span>
           <span>Business Intelligence</span>
-          <span>Data Visualization</span>
           <span>Automation</span>
           <span>Scientific Research</span>
         </div>
 
         <div className="hero-buttons">
           <a href="#projects" className="btn-primary">
-            Explorar Projetos
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/giovani-boldrini-custoias-63312516a"
-            target="_blank"
-            rel="noreferrer"
-            className="btn-secondary"
-          >
-            LinkedIn
+            Ver Projetos
           </a>
         </div>
 
         <div className="hero-metrics">
-
           <div className="metric-card">
             <h3>USP</h3>
             <p>Mestrado em Ciências</p>
           </div>
 
           <div className="metric-card">
+            <h3>Vivo</h3>
+            <p>Tecnologia & Dados</p>
+          </div>
+
+          <div className="metric-card">
             <h3>8+</h3>
-            <p>Projetos de Dados</p>
+            <p>Projetos Relevantes</p>
           </div>
 
           <div className="metric-card">
             <h3>15+</h3>
             <p>Tecnologias Aplicadas</p>
           </div>
-
-          <div className="metric-card">
-            <h3>Analytics</h3>
-            <p>Foco Profissional</p>
-          </div>
-
         </div>
       </div>
 
       <div className="hero-image-wrapper">
 
-        <div className="analytics-card">
-          <span>Analytics Snapshot</span>
-
-          <div className="analytics-bars">
-
-            <div className="analytics-item">
-              <label>Data Analytics</label>
-              <div className="bar">
-                <div className="fill analytics"></div>
-              </div>
-            </div>
-
-            <div className="analytics-item">
-              <label>Business Intelligence</label>
-              <div className="bar">
-                <div className="fill bi"></div>
-              </div>
-            </div>
-
-            <div className="analytics-item">
-              <label>Pesquisa Científica</label>
-              <div className="bar">
-                <div className="fill science"></div>
-              </div>
-            </div>
-
-          </div>
-        </div>
+        <div className="glow glow-orange"></div>
+        <div className="glow glow-purple"></div>
+        <div className="hero-ring ring-1"></div>
+        <div className="hero-ring ring-2"></div>
+        <div className="hero-ring ring-3"></div>
 
         <div className="hero-image">
           <img
@@ -110,7 +75,6 @@ function Hero() {
             alt="Giovani Boldrini Custoias"
           />
         </div>
-
       </div>
     </section>
   );
