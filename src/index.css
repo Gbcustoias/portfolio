@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 :root {
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
@@ -18,7 +20,7 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 
   background:
     radial-gradient(
