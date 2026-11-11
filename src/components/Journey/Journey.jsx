@@ -2,83 +2,73 @@ import "./Journey.css";
 
 function Journey() {
   const journeySteps = [
-    {
-      title: "Nutrição",
-      subtitle: "Base em Evidências",
-      description:
-        "Primeiros contatos com indicadores, interpretação de resultados e tomada de decisão baseada em evidências."
-    },
-    {
-      title: "Pesquisa Científica",
-      subtitle: "Método e Estatística",
-      description:
-        "Desenvolvimento de pensamento analítico através de pesquisa experimental, estatística e validação de hipóteses."
-    },
-    {
-      title: "USP",
-      subtitle: "Mestrado em Ciências",
-      description:
-        "Aprofundamento em bioestatística, metodologia científica e análise de dados aplicada."
-    },
-    {
-      title: "Docência",
-      subtitle: "Comunicação e Liderança",
-      description:
-        "Transformação de conhecimento complexo em informação acessível por meio do ensino universitário."
-    },
-    {
-      title: "Tecnologia",
-      subtitle: "Escalabilidade",
-      description:
-        "Automação de processos e desenvolvimento de soluções para ampliar o impacto da análise de dados."
-    },
-    {
-      title: "Analytics",
-      subtitle: "Tomada de Decisão",
-      description:
-        "Construção de indicadores, dashboards e análises voltadas para ambientes corporativos."
-    },
-    {
-      title: "Data Science",
-      subtitle: "Próxima Evolução",
-      description:
-        "Aplicação de Machine Learning e modelos analíticos para geração de conhecimento e previsões."
-    }
-  ];
+  {
+    title: "Nutrição",
+    description:
+      "Formação inicial voltada para avaliação de indicadores de saúde e tomada de decisão baseada em evidências."
+  },
+  {
+    title: "Pesquisa Científica",
+    description:
+      "Atuação em estudos experimentais envolvendo estatística, análise de dados e validação de hipóteses."
+  },
+  {
+    title: "Mestrado USP",
+    description:
+      "Aprofundamento em metodologia científica, bioestatística e interpretação de resultados."
+  },
+  {
+    title: "Docência",
+    description:
+      "Experiência no ensino de pesquisa científica, bioestatística e comunicação técnica."
+  },
+  {
+    title: "Tecnologia",
+    description:
+      "Aplicação de software e automação para ampliar a capacidade de análise e geração de valor."
+  },
+  {
+    title: "Dados & Analytics",
+    description:
+      "Construção de dashboards, indicadores e análises para suporte à tomada de decisão."
+  },
+  {
+    title: "Ciência de Dados",
+    description:
+      "Aplicação de Machine Learning e métodos analíticos para exploração e previsão de cenários."
+  }
+];
 
   return (
     <section id="journey" className="journey">
       <div className="section-header">
         <span className="section-tag">
-          Jornada Profissional
+          Jornada
         </span>
 
         <h2>
-          Uma carreira construída sobre análise de evidências.
+          Uma evolução contínua entre ciência,
+          tecnologia e dados.
         </h2>
-
         <p>
-          Embora tenha passado por diferentes áreas,
-          toda a minha trajetória possui um elemento em comum:
-          transformar informação em conhecimento útil para apoiar
-          decisões melhores.
+          Minha trajetória foi construída em diferentes áreas, aqui um pouco da minha história até os dias de hoje.
         </p>
       </div>
 
-      <div className="journey-roadmap">
+      <div className="timeline">
         {journeySteps.map((step, index) => (
-          <div className="journey-card" key={index}>
-            <div className="journey-number">
-              {String(index + 1).padStart(2, "0")}
+          <div
+            className="timeline-item"
+            key={index}
+          >
+            <div className="timeline-marker">
+              {index + 1}
             </div>
 
-            <h3>{step.title}</h3>
-
-            <span className="journey-subtitle">
-              {step.subtitle}
-            </span>
-
-            <p>{step.description}</p>
+            <div className="timeline-content">
+              <h3>{step.title}</h3>
+              <p>{step.description}</p>
+            </div>
           </div>
         ))}
       </div>
