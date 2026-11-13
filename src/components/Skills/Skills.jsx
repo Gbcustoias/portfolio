@@ -5,8 +5,7 @@ function Skills() {
     {
       name: "Python",
       level: 8,
-      category: "Dados",
-      evidence: [
+      workedOn: [
         "Jira Analytics Reporter",
         "Predição ALDH2",
         "TBCA Scraping",
@@ -16,8 +15,7 @@ function Skills() {
     {
       name: "SQL",
       level: 7,
-      category: "Dados",
-      evidence: [
+      workedOn: [
         "Vivo",
         "Observatório CNES",
         "SQL Analytics"
@@ -26,18 +24,16 @@ function Skills() {
     {
       name: "Power BI",
       level: 8,
-      category: "BI",
-      evidence: [
+      workedOn: [
         "Vivo",
-        "Indicadores",
-        "Dashboards"
+        "Dashboards",
+        "Indicadores"
       ]
     },
     {
       name: "Excel",
       level: 9,
-      category: "Analytics",
-      evidence: [
+      workedOn: [
         "Vivo",
         "Pesquisa Científica",
         "Indicadores"
@@ -46,8 +42,7 @@ function Skills() {
     {
       name: "Estatística",
       level: 8,
-      category: "Pesquisa",
-      evidence: [
+      workedOn: [
         "USP",
         "Pesquisa Científica",
         "Docência"
@@ -56,8 +51,7 @@ function Skills() {
     {
       name: "Machine Learning",
       level: 6,
-      category: "Data Science",
-      evidence: [
+      workedOn: [
         "Predição ALDH2",
         "XGBoost",
         "SHAP"
@@ -66,31 +60,58 @@ function Skills() {
     {
       name: "Data Analytics",
       level: 8,
-      category: "Analytics",
-      evidence: [
+      workedOn: [
         "Vivo",
         "CNES",
         "Jira Reporter"
       ]
     },
     {
-      name: "Business Intelligence",
+      name: "PostgreSQL",
+      level: 7,
+      workedOn: [
+        "Observatório CNES",
+        "Spring Boot",
+        "APIs"
+      ]
+    },
+    {
+      name: "Power Automate",
       level: 8,
-      category: "Analytics",
-      evidence: [
+      workedOn: [
+        "Vivo",
+        "Automação",
+        "Governança"
+      ]
+    },
+    {
+      name: "Java",
+      level: 5,
+      workedOn: [
+        "Observatório CNES",
+        "Spring Boot",
+        "APIs"
+      ]
+    },
+    {
+      name: "Data Visualization",
+      level: 8,
+      workedOn: [
         "Power BI",
-        "Jira Reporter",
+        "CNES",
         "Dashboards"
+      ]
+    },
+    {
+      name: "Data Engineering",
+      level: 4,
+      workedOn: [
+        "ETL",
+        "DuckDB",
+        "PostgreSQL"
       ]
     }
   ];
-
-  const getLevelName = (level) => {
-    if (level <= 2) return "Iniciante";
-    if (level <= 5) return "Intermediário";
-    if (level <= 8) return "Avançado";
-    return "Especialista";
-  };
 
   return (
     <section id="skills" className="skills">
@@ -100,13 +121,12 @@ function Skills() {
         </span>
 
         <h2>
-          Competências sustentadas por experiência prática.
+          Algumas tecnologias e conhecimentos aplicados ao longo da minha trajetória.
         </h2>
 
         <p>
-          Cada competência apresentada está associada
-          a projetos, experiências profissionais ou
-          atividades de pesquisa em que foi aplicada.
+          Competências utilizadas em projetos, pesquisa científica
+          e experiências profissionais.
         </p>
       </div>
 
@@ -117,33 +137,33 @@ function Skills() {
             key={skill.name}
           >
             <div className="skill-top">
-              <div>
-                <h3>{skill.name}</h3>
-
-                <span className="skill-level-name">
-                  {getLevelName(skill.level)}
-                </span>
-              </div>
+              <h3>{skill.name}</h3>
 
               <span className="skill-score">
                 {skill.level}/10
               </span>
             </div>
 
-            <div className="skill-bar">
-              <div
-                className="skill-fill"
-                style={{
-                  width: `${skill.level * 10}%`
-                }}
-              />
+            <div className="skill-level">
+              {[...Array(10)].map((_, index) => (
+                <div
+                  key={index}
+                  className={
+                    index < skill.level
+                      ? `signal-bar active bar-${index + 1}`
+                      : `signal-bar bar-${index + 1}`
+                  }
+                />
+              ))}
             </div>
 
-            <div className="evidence-section">
-              <span>Evidências</span>
+            <div className="worked-section">
+              <span className="worked-title">
+                Trabalhado em:
+              </span>
 
-              <div className="evidence-tags">
-                {skill.evidence.map((item) => (
+              <div className="worked-tags">
+                {skill.workedOn.map((item) => (
                   <span key={item}>
                     {item}
                   </span>
@@ -152,13 +172,6 @@ function Skills() {
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="skills-legend">
-        <div>0-2 • Iniciante</div>
-        <div>3-5 • Intermediário</div>
-        <div>6-8 • Avançado</div>
-        <div>9-10 • Especialista</div>
       </div>
     </section>
   );
