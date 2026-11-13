@@ -5,71 +5,98 @@ function Education() {
     {
       institution: "Universidade de São Paulo (USP)",
       degree: "Mestrado em Ciências",
-      period: "Pesquisa Científica",
-      highlight: "Base Analítica",
       description:
-        "Pesquisa experimental envolvendo bioestatística, metodologia científica, análise de dados, interpretação de resultados e produção científica."
-    },
-    {
-      institution: "Pós-graduação em Nutrição Esportiva",
-      degree: "Especialização",
-      period: "Aprofundamento",
-      highlight: "Evidências Científicas",
-      description:
-        "Avaliação crítica de evidências, interpretação de resultados e aplicação prática de conhecimento baseado em dados."
-    },
-    {
-      institution: "Graduação em Nutrição",
-      degree: "Bacharelado",
-      period: "Formação Inicial",
-      highlight: "Tomada de Decisão",
-      description:
-        "Construção de pensamento analítico voltado para indicadores, avaliação clínica e decisões baseadas em evidências."
+        "Pesquisa experimental, bioestatística, metodologia científica e análise de dados."
     },
     {
       institution: "FATEC",
       degree: "Análise e Desenvolvimento de Sistemas",
-      period: "Tecnologia",
-      highlight: "Expansão Técnica",
       description:
-        "Desenvolvimento de software, bancos de dados, automação, APIs e tecnologias para soluções orientadas por dados."
+        "Desenvolvimento de software, bancos de dados, APIs e automação de processos."
+    },
+    {
+      institution: "Pós-graduação em Nutrição Esportiva",
+      degree: "Especialização",
+      description:
+        "Avaliação crítica de evidências e interpretação de resultados."
+    },
+    {
+      institution: "Graduação em Nutrição",
+      degree: "Bacharelado",
+      description:
+        "Formação baseada em evidências, indicadores e tomada de decisão."
     }
+  ];
+
+  const certifications = [
+    "Databases for Data Scientists",
+    "Expressway to Data Science: Python Programming",
+    "Introduction to Machine Learning",
+    "Power BI Avançado",
+    "Fundamentos de Dados TI",
+    "APIs e Microsserviços REST"
   ];
 
   return (
     <section id="education" className="education">
       <div className="section-header">
-        <span className="section-tag">Formação</span>
+        <span className="section-tag">
+          Formação
+        </span>
 
         <h2>
-          Ciência, análise de dados e tecnologia como uma única trajetória.
+          Formação acadêmica e desenvolvimento contínuo.
         </h2>
 
         <p>
-          Minha formação foi construída em diferentes áreas do conhecimento,
-          sempre com um elemento em comum: análise de informações,
-          interpretação de resultados e tomada de decisão baseada em evidências.
+          Graduações, pós-graduação, mestrado e certificações
+          voltadas para ciência, tecnologia e análise de dados.
         </p>
       </div>
 
       <div className="education-grid">
-        {education.map((item, index) => (
-          <div className="education-card" key={index}>
-            <span className="education-badge">
-              {item.highlight}
-            </span>
-
+        {education.map((item) => (
+          <div
+            className="education-card"
+            key={item.institution}
+          >
             <h3>{item.degree}</h3>
 
             <h4>{item.institution}</h4>
 
-            <span className="education-period">
-              {item.period}
-            </span>
-
             <p>{item.description}</p>
           </div>
         ))}
+      </div>
+
+      <div className="certifications-card">
+        <div className="certifications-header">
+          <div>
+            <h3>Certificações</h3>
+
+            <p>
+              Destaque para algumas certificações relacionadas a
+              dados, programação, analytics e tecnologia.
+            </p>
+          </div>
+
+          <a
+            href="https://github.com/Gbcustoias/Gbcustoias/blob/main/CERTIFICACOES.md"
+            target="_blank"
+            rel="noreferrer"
+            className="certifications-link"
+          >
+            Ver todas →
+          </a>
+        </div>
+
+        <div className="certifications-grid">
+          {certifications.map((cert) => (
+            <span key={cert}>
+              {cert}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );
